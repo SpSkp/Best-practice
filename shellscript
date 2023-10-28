@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/SpSkp/pipeline.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'javac mamword.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'java Double'
+            }
+        } 
+    }    
+}
