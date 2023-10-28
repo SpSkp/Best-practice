@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'javac mamword.java'
+        sh '''javac mamword.java
+java Double'''
       }
     }
 
